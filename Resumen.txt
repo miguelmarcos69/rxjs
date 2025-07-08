@@ -1,0 +1,157 @@
+Funciones RxJS utilizadas en tu proyecto
+
+🔵 Creación de Observables
+
+🚀 ¿Sabías que RxJS tiene múltiples formas de crear Observables? 
+
+Como desarrollador, he explorado las principales funciones de creación y aquí tienes las que más uso:
+
+💡 LOS FUNDAMENTOS:
+✅ Observable → La clase base para streams reactivos
+✅ Observer → Define cómo consumir los datos (next, error, complete)
+✅ Subject → El "Swiss Army knife" - observable Y observer
+
+🎯 CREACIÓN DESDE DATOS:
+✅ of() → Para valores conocidos: of(1, 2, 3)
+✅ from() → Convierte arrays/promesas: from([1, 2, 3])
+✅ range() → Secuencias numéricas: range(1, 5)
+
+⚡ CREACIÓN TEMPORAL:
+✅ interval() → Cada X milisegundos: interval(1000)
+✅ timer() → Con delay inicial: timer(2000, 1000)
+
+🎪 EVENTOS DEL DOM:
+✅ fromEvent() → Clicks, scroll, etc.: fromEvent(button, 'click')
+
+💬 ¿Cuál usas más en tus proyectos? #RxJS #JavaScript #ReactiveProgramming
+
+________________________________________________________________________________________________
+🔶 Operadores de Transformación
+
+🔥 ¡La MAGIA de RxJS está en transformar datos al vuelo!
+
+Estos 5 operadores han revolucionado mi forma de manejar streams de datos:
+
+🎨 TRANSFORMACIÓN DIRECTA:
+✅ map() → El más usado: map(x => x * 2)
+✅ mapTo() → Valor constante: mapTo('clicked!')
+✅ pluck() → Extrae propiedades: pluck('user', 'name')
+
+📊 ACUMULADORES PODEROSOS:
+✅ scan() → Reduce en tiempo real: scan((acc, val) => acc + val, 0)
+✅ reduce() → Resultado final: reduce((acc, val) => acc + val, 0)
+
+💰 Real talk: scan() es como reduce() pero ves el progreso en tiempo real!
+
+🏆 Dato curioso: map() es probablemente el operador más usado en cualquier proyecto RxJS.
+
+💭 ¿Sabías que pluck() se puede anidar? #RxJS #DataTransformation #JavaScript
+________________________________________________________________________________________________
+🔷 Operadores de Filtrado
+
+🎯 ¡Los operadores de filtrado son el SUPERPODER de RxJS!
+
+En mis proyectos, estos 9 operadores me han salvado incontables veces para controlar el flujo de datos:
+
+🚀 CONTROL BÁSICO:
+✅ filter() → Solo lo que necesitas: filter(x => x > 5)
+✅ take() → Primeros N valores: take(3)
+✅ first() → Solo el primero: first()
+✅ skip() → Sáltate los primeros: skip(2)
+
+⏰ CONTROL CONDICIONAL:
+✅ takeWhile() → Mientras se cumpla: takeWhile(x => x < 10)
+✅ takeUntil() → Hasta que algo pase: takeUntil(click$)
+
+✨ VALORES ÚNICOS:
+✅ distinct() → Sin duplicados: distinct()
+✅ distinctUntilChanged() → Solo si cambia: distinctUntilChanged()
+✅ distinctUntilKeyChanged() → Por propiedad específica: distinctUntilKeyChanged('id')
+
+💡 Pro tip: Combínalos para crear streams super eficientes!
+
+🤔 ¿Cuál te parece más útil? #RxJS #ReactiveProgramming #Angular
+
+
+________________________________________________________________________________________________
+⏱️ Operadores de Tiempo
+
+⚡ ¿Tu app se siente lenta o bombardeada con eventos? ¡Estos operadores son la SOLUCIÓN!
+
+El timing es TODO en aplicaciones modernas. Aquí mis 4 salvavidas temporales:
+
+🚫 CONTROL DE SPAM:
+✅ debounce() → Espera la calma: debounce(() => timer(300))
+✅ debounceTime() → Más simple: debounceTime(300)
+
+🎯 CONTROL DE FRECUENCIA:
+✅ throttleTime() → Primero y pausa: throttleTime(1000)
+✅ sampleTime() → Último en intervalo: sampleTime(1000)
+
+🔥 Use case real: debounceTime() en search boxes = UX increíble!
+
+⚠️ Pro tip: throttleTime vs debounceTime - ¿sabes cuál usar cuándo?
+
+💡 ¿Has usado alguno para optimizar performance? #RxJS #Performance #UX
+
+🔧 Operadores de Utilidad
+
+🛠️ Los HÉROES silenciosos que hacen todo más fácil!
+
+Solo 2 operadores, pero son ESENCIALES en cualquier pipeline RxJS:
+
+🔍 DEBUG Y EFECTOS:
+✅ tap() → Espía sin alterar: tap(console.log)
+
+🧩 COMPOSICIÓN:
+✅ pipe() → Une operadores: pipe(map(), filter(), take(5))
+
+💎 Golden rule: tap() para debugging, pipe() para TODO lo demás!
+
+🤓 Fun fact: pipe() es la razón por la que RxJS es tan elegante.
+
+💭 ¿Cuántos tap() tienes en tu código ahora mismo? #RxJS #CleanCode
+
+📅 Schedulers
+
+⚙️ Los CEREBROS que controlan CUÁNDO suceden las cosas!
+
+Schedulers = el motor invisible de RxJS que controla la ejecución:
+
+⚡ TIPOS DE EJECUCIÓN:
+✅ asyncScheduler → Asíncrono: observeOn(asyncScheduler)
+✅ asapScheduler → Lo antes posible: subscribeOn(asapScheduler)
+
+🎯 Real talk: La mayoría no los usa directamente, pero están ahí trabajando!
+
+🧠 Mind blown: RxJS decide automáticamente qué scheduler usar.
+
+🚀 Advanced tip: Úsalos para testing y control de concurrencia.
+
+🤔 ¿Sabías que existen? #RxJS #Advanced #Schedulers
+________________________________________________________________________________________________
+📊 MI JOURNEY CON RxJS - Los números hablan!
+
+🎯 DESPUÉS DE EXPLORAR RxJS, aquí está mi arsenal completo:
+
+🏆 TOP CATEGORIES:
+🥇 Filtrado: 9 funciones → Los más versátiles
+🥈 Creación: 6 funciones → La base de todo
+🥉 Transformación: 5 funciones → La magia pura
+
+📈 DISTRIBUTION BREAKDOWN:
+✅ Observables/Subjects: 3 funciones
+✅ Creación: 6 funciones  
+✅ Transformación: 5 funciones
+✅ Filtrado: 9 funciones
+✅ Tiempo: 4 funciones
+✅ Utilidad: 2 funciones
+✅ Schedulers: 2 funciones
+
+🎉 TOTAL: 31 funciones de RxJS dominadas!
+
+💡 Key insight: El 80% de mis casos de uso se resuelven con solo 10 operadores.
+
+🚀 Next level: ¿Cuántas funciones RxJS conoces TÚ?
+
+👇 Comparte tu número en los comentarios! #RxJS #Learning #WebDevelopment
