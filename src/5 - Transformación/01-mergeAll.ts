@@ -12,7 +12,7 @@ import { ajax } from "rxjs/ajax";
 import {
   GithubUser,
   GithubUsersResp,
-} from "../interface/github-users.interfaces";
+} from "../0 - Interface/github-users.interfaces";
 
 /* referencias */
 const body = document.querySelector("body");
