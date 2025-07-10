@@ -10,6 +10,7 @@ import { combineLatest, fromEvent, map, merge } from "rxjs";
  ).subscribe(console.log);
   */
 
+
 const input1 = document.createElement("input");
 
 const input2 = document.createElement("input");
@@ -24,7 +25,7 @@ const getInputStream = (input: HTMLInputElement) =>
   fromEvent<KeyboardEvent>(input, "keyup").pipe(
     map((event) => event.target["value"])
   );
-
+//combineLatest combina los últimos valores emitidos por ambos observables
 combineLatest(getInputStream(input1), getInputStream(input2)).subscribe(
   console.log
 );
